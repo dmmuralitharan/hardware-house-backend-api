@@ -1,6 +1,8 @@
 from app import db
 
 class Review(db.Model):
+    __tablename__ = 'reviews'
+
     review_id = db.Column(db.Integer, primary_key=True)
     product_id = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, nullable=False)
