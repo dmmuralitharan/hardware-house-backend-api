@@ -1,4 +1,4 @@
-from app.models.order_details import OrderDetail
+from app.models.order_detail import OrderDetail
 from flask import jsonify, request
 from app import db
 
