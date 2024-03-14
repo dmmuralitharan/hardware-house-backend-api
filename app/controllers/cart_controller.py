@@ -1,4 +1,4 @@
-from app.models.cart_model import Cart
+from app.models.cart import Cart
 from flask import jsonify, request
 from app import db
 
