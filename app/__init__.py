@@ -15,6 +15,8 @@ def create_app():
     from app.routes.product_routes import product_routes_bp
     from app.routes.review_routes import review_routes_bp
     from app.routes.cart_routes import cart_routes_bp
+    from app.routes.order_routes import order_routes_bp
+    from app.routes.order_details_routes import order_details_routes_bp
     
     app.register_blueprint(auth_routes_bp, url_prefix='/api/v1')
     app.register_blueprint(user_routes_bp, url_prefix='/api/v1')
@@ -22,5 +24,7 @@ def create_app():
     app.register_blueprint(product_routes_bp, url_prefix='/api/v1')
     app.register_blueprint(review_routes_bp, url_prefix='/api/v1')
     app.register_blueprint(cart_routes_bp, url_prefix='/api/v1')
+    app.register_blueprint(order_routes_bp, url_prefix='/api/v1')
+    app.register_blueprint(order_details_routes_bp, url_prefix='/api/v1')
 
     return app

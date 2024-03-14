@@ -1,6 +1,8 @@
 from app import db
 
 class Order(db.Model):
+    __tablename__ = 'orders'
+
     order_id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer)
     order_date = db.Column(db.TIMESTAMP, server_default=db.func.current_timestamp())
